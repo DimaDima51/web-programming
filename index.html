@@ -2,44 +2,50 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title>Супер-пупер сайт</title>
+        <title>Смешные котики</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
-    <body style="font-family: sans-serif; background-color: rgb(240, 240, 240);">
-        <h1 style="color: rgb(95, 158, 160); text-align: center; font-size: 2.5em; margin-bottom: 20px;">Супер-пупер сайт</h1>
+    <body>
+        <h1 id="main-title">Смешные котики</h1>
 
-        <h2 style="color: rgb(85, 85, 85); font-size: 1.8em; text-decoration: underline;">Главное</h2>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2 class="section-title">Почему котики такие смешные?</h2>
 
-        <div style="font-size: 1.3em; background-color: rgb(250, 250, 210); padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-            Какой-то текст
-            <div style="margin-top: 10px; color: rgb(102, 102, 102); font-style: italic;">Вот это да, ещё текст, но разделённый с помощью div!</div>
+                <div class="highlight-box">
+                    Коты - самые забавные существа на планете!
+                    <div class="sub-text">Они постоянно делают что-то нелепое и милое</div>
+                </div>
+
+                <p class="main-text">
+                    Каждый день котики <b>радуют</b> нас своими <em>смешными</em> выходками
+                </p>
+
+                <div class="highlight-box">
+                    <span class="important-list-title">Топ причин почему коты смешные:</span>
+                    <ul class="skills-list">
+                        <li>Падают с диванов</li>
+                        <li>Бегают ночью как сумасшедшие</li>
+                        <li>Пугаются огурцов</li>
+                        <li>Спят в смешных позах</li>
+                    </ul>    
+                </div>
+            </div>
+            
+            <div class="image-container">
+                <h3 class="section-title">Котик дня</h3>
+                <img src="cat.png" alt="Смешной кот" width="400" height="300">
+            </div>
         </div>
 
-        <p style="font-size: 1.3em; line-height: 1.6; color: rgb(68, 68, 68);">
-            Текст с <b style="color: rgb(0, 0, 0);">жирным</b> начертанием и <em style="color: rgb(136, 136, 136);">курсивом</em>
-        </p>
-
-        <div style="background-color: rgb(250, 250, 210); padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-top: 20px;">
-            <span style="font-weight: bold; color: rgb(0, 0, 0); font-size: 1.4em;">Что должен знать каждый программист:</span>
-            <ul style="font-size: 1.2em; padding-left: 20px; margin-top: 10px;">
-                <li>Английский</li>
-            </ul>    
-        </div>
-
-        <div style="background-color: rgb(250, 250, 210); display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-top: 30px;">
-            <a href="https://mauniver.ru/student/timetable/new/" target="_blank" 
-               style="color: rgb(255, 255, 255); background-color: rgb(95, 158, 160); padding: 15px 20px; border-radius: 5px; font-size: 25px; text-decoration: none; width: 250px; text-align: center;">
-                Расписание пар
+        <div class="flex-container">
+            <a href="https://yandex.ru/images/search?text=коты" target="_blank" class="button primary-button">
+                Ещё коты
             </a>
             
-            <a href="https://github.com/DimaDima51/web-programming.git" target="_blank" 
-               style="color: rgb(255, 255, 255); background-color: rgb(51, 51, 51); padding: 15px 20px; border-radius: 5px; font-size: 25px; text-decoration: none; width: 250px; text-align: center;">
+            <a href="https://github.com/DimaDima51/web-programming.git" target="_blank" class="button secondary-button">
                 Мой репозиторий
             </a>
-        </div>
-
-        <div style="margin-top: 30px; text-align: center;">
-            <h3 style="color: rgb(95, 158, 160); font-size: 1.5em;">Картинка дня</h3>
-            <img src="cat.png" alt="Смешной кот" width="250" height="250" style="border: 2px solid rgb(204, 204, 204); border-radius: 10px;">
         </div>
     </body>
 </html>
