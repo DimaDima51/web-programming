@@ -2,37 +2,50 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title>Супер-пупер сайт</title>
+        <title>Смешные котики</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Супер-пупер сайт</h1>
-        <h2>Главное</h2>
+        <h1 id="main-title">Смешные котики</h1>
 
-        <div>
-            Какой-то текст
-            <div>Вот это да, ещё текст, но разделённый с помощью div!</div>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2 class="section-title">Почему котики такие смешные?</h2>
+
+                <div class="highlight-box">
+                    Коты - самые забавные существа на планете!
+                    <div class="sub-text">Они постоянно делают что-то нелепое и милое</div>
+                </div>
+
+                <p class="main-text">
+                    Каждый день котики <b>радуют</b> нас своими <em>смешными</em> выходками
+                </p>
+
+                <div class="highlight-box">
+                    <span class="important-list-title">Топ причин почему коты смешные:</span>
+                    <ul class="skills-list">
+                        <li>Падают с диванов</li>
+                        <li>Бегают ночью как сумасшедшие</li>
+                        <li>Пугаются огурцов</li>
+                        <li>Спят в смешных позах</li>
+                    </ul>    
+                </div>
+            </div>
+            
+            <div class="image-container">
+                <h3 class="section-title">Котик дня</h3>
+                <img src="cat.png" alt="Смешной кот" width="400" height="300">
+            </div>
         </div>
 
-        <p>Текст с <b>жирным</b> начертанием и <em>курсивом</em></p>
-
-        <div>
-            <span>Что должен знать каждый программист:</span>
-            <ul>
-                <li>Английский</li>
-            </ul>    
-        </div>
-
-        <div>
-            <a href="https://mauniver.ru/student/timetable/new/" target="_blank">Расписание пар</a>
-        </div>
-
-        <div>
-            <a href="https://github.com/DimaDima51/web-programming.git" target="_blank">Мой репозиторий</a>
-        </div>
-
-        <div>
-            <h3>Картинка дня</h3>
-            <img src="cat.png" alt="Смешной кот" width="250" height="250">
+        <div class="flex-container">
+            <a href="https://yandex.ru/images/search?text=коты" target="_blank" class="button primary-button">
+                Ещё коты
+            </a>
+            
+            <a href="https://github.com/DimaDima51/web-programming.git" target="_blank" class="button secondary-button">
+                Мой репозиторий
+            </a>
         </div>
     </body>
 </html>
