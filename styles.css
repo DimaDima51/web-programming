@@ -1,5 +1,5 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     background-color: #f0f8ff;
     margin: 0;
     padding: 20px;
@@ -20,14 +20,24 @@ body {
     text-underline-offset: 10px;
 }
 
-.highlight-box {
-    font-size: 1.6em;
+.highlight-box, .flex-container, .cats-table {
     background-color: #fffacd;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin: 20px 0;
+}
+
+.highlight-box, .cats-table {
     border: 2px dashed #ffb347;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border: 2px dotted #ff6b6b;
 }
 
 .sub-text {
@@ -36,49 +46,40 @@ body {
     font-style: italic;
 }
 
+.highlight-box {
+    font-size: 1.6em;
+}
+
 .main-text {
     font-size: 1.6em;
     line-height: 1.6;
     color: #2d3436;
+    margin: 10px 0;
 }
 
 .important-list-title {
+    display: block;
     font-weight: bold;
     color: #e17055;
     font-size: 1.2em;
-    display: block;
     margin-bottom: 10px;
 }
 
 .skills-list {
     font-size: 1.2em;
     padding-left: 20px;
-    margin-top: 10px;
     color: #6c5ce7;
 }
 
-.flex-container {
-    background-color: #fffacd;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border: 2px dotted #ff6b6b;
-}
-
 .button {
+    display: inline-block;
+    width: 250px;
     padding: 15px 20px;
     border-radius: 5px;
-    font-size: 25px;
-    text-decoration: none;
-    width: 250px;
+    font-size: 1.6em;
     text-align: center;
+    color: #fff;
+    text-decoration: none;
     transition: transform 0.3s;
 }
 
@@ -87,28 +88,45 @@ body {
 }
 
 .primary-button {
-    color: white;
     background-color: #ff6b6b;
 }
 
 .secondary-button {
-    color: white;
     background-color: #6c5ce7;
 }
 
 .image-container {
-    margin-top: 30px;
     text-align: center;
+    margin: 30px auto;
+    width: 400px;
+    max-width: 100%;
+}
+
+@keyframes wiggle {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-5deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .image-container img {
+    width: 100%;
+    height: auto;
     border: 2px solid #ffb347;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    animation: wiggle 0.6s infinite ease-in-out;
+    transform-origin: center;
 }
 
 .content-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: flex-start;
     margin-bottom: 30px;
@@ -116,9 +134,83 @@ body {
 
 .text-content {
     flex: 1;
+    min-width: 300px;
 }
 
-.image-container {
-    flex-shrink: 0;
-    margin-top: 20px;
+.cats-table {
+    box-sizing: border-box;
+}
+
+.cats-table h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ff6b6b;
+}
+
+.cats-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cats-table th, .cats-table td {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.7em;
+    border-bottom: 1px solid #ffb347;
+}
+
+.cats-table th {
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 1.8em;
+}
+
+@media only screen and (max-width: 756px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .cats-table {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cats-table table {
+        display: block;
+    }
+
+    .cats-table thead {
+        display: none;
+    }
+
+    .cats-table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cats-table tr {
+        border: 2px dashed #ffb247;
+    }
+
+    .cats-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+        text-align: left;
+        border-bottom: 1px solid #ffb3474d;
+    }
+
+    .cats-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #ff6b6b;
+        margin-right: 15px;
+        text-align: left;
+        flex-shrink: 0;
+    }
 }
