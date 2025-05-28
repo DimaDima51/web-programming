@@ -25,3 +25,64 @@ function createCarousel(imagesList, parentElementSelector) {
 
     parent.appendChild(carousel);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".form-send-catinfo");
+    form.addEventListener("submit", (ev) => {
+        ev.preventDefault();
+
+        const nameCatValid = validateCatName(form.cat_name);
+        const emailValid = validateEmail(form.email);
+        const descriptionValid = validateDescription(form.description);
+        const linkValid = validateLink(form.link);
+
+        if (nameCatValid && emailValid && descriptionValid && linkValid) {
+            console.log("Форма успешно прошла проверку");
+        } else {
+            console.log("Форма содержит ошибки...");
+        }
+    });
+
+    // Имя кота не менее 4 символов 
+    function validateCatName(input) {
+        if (!input) return false;
+        const value = input.value.trim();
+        toggleError(input, value.length >= 4);
+        return value.length >= 4;
+    }
+
+    // Валидация email (наличие @ и доменного расширения)
+    function validateEmail(input) {
+        if (!input) return false;
+        const value = input.value.trim();
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        toggleError(input, pattern.test(value));
+        return pattern.test(value);
+    }
+
+    // Описание не менее 5 символов
+    function validateDescription(input) {
+        if (!input) return false;
+        const value = input.value.trim();
+        toggleError(input, value.length >= 5);
+        return value.length >= 5;
+    }
+
+    // Ссылки должны начинаться с https:// или http://
+    function validateLink(input) {
+        if (!input) return false;
+        const value = input.value.trim();
+        const pattern = /^https?:\/\//;
+        toggleError(input, pattern.test(value));
+        return pattern.test(value);
+    }
+
+    function toggleError(input, isValid) {
+        if (!isValid) {
+            input.classList.add("error");
+        } else {
+            input.classList.remove("error");
+        }
+    }
+});
+

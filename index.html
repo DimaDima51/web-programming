@@ -73,6 +73,46 @@
             </table>
         </div>
 
+        <div class="form-block">
+            <h2 class="section-title">Заметили необычные способности у вашего питомца? Напишите!</h2>
+            <form action="/api-url" method="post" class="form-send-catinfo highlight-box">
+
+                <div class="form-send-catinfo">
+                    <label for="cat_name">Имя котика: </label>
+                    <input type="text" name="cat_name" id="cat_name" required />
+                </div>
+
+                <div class="form-send-catinfo">
+                    <label for="cat_age">Возраст котика: </label>
+                    <input type="text" name="cat_age" id="cat_age" required />
+                </div>
+
+                <div class="form-send-catinfo">
+                    <label for="owner_FIO">Ваше ФИО: </label>
+                    <input type="text" name="owner_FIO" id="owner_FIO" required />
+                </div>
+
+                <div class="form-send-catinfo">
+                    <label for="description">Описание: </label>
+                    <input type="text" name="description" id="description" required />
+                </div>
+
+                <div class="form-send-catinfo">
+                    <label for="link">Ссылка: </label>
+                    <input type="text" name="link" id="link" required />
+                </div>
+
+                <div class="form-send-catinfo">
+                    <label for="email">Ваша почта: </label>
+                    <input type="email" name="email" id="email" required />
+                </div>
+
+                <div class="form-send-catinfo">
+                    <input type="submit" value="Отправить!" class="button primary-button" />
+                </div>
+            </form>
+        </div>
+
         <div class="flex-container">
             <a href="https://yandex.ru/images/search?text=коты" target="_blank" class="button primary-button">
                 Ещё коты
@@ -94,8 +134,7 @@
           ];
         
           createCarousel(catUrls, "#cat-carousel");
-        </script>
-        
+        </script>       
 
     </body>
 </html>

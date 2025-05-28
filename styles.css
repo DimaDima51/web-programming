@@ -232,3 +232,76 @@ body {
 .carousel-image.active {
     opacity: 1;
 }
+
+form.form-send-catinfo {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin: 30px auto;
+	max-width: 600px;
+	padding: 20px;
+	background: #fffacd;
+	border: 2px dashed #ffb347;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	box-sizing: border-box;
+}
+
+.form-send-catinfo > div {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.form-send-catinfo label {
+	flex: 0 0 200px;
+	text-align: right;
+}
+
+.form-send-catinfo input[type="text"],
+.form-send-catinfo input[type="email"] {
+	flex: 1;
+	min-width: 0;
+	padding: 10px;
+	border: 2px dashed #ffb347;
+	border-radius: 6px;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.form-send-catinfo input[type="submit"] {
+	align-self: center;
+	padding: 10px 20px;
+	font-size: 1.6em;
+	font-family: inherit;
+	font-size: inherit;
+	background: #ff6b6b;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: transform .3s;
+}
+
+.form-send-catinfo input[type="submit"]:hover {
+	transform: rotate(1deg) scale(1.05);
+}
+
+.form-block {
+	max-width: 600px;
+	margin: 30px auto;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+.form-block h2.section-title {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #4b6584;
+}
+
+.error {
+  border-color: #e74c3c !important;
+  background-color: #fdecea;
+}
