@@ -24,10 +24,11 @@
             </div>
 
             <div class="image-container">
-                <h3 class="section-title">Котик дня</h3>
-                <img src="cat.png" alt="Смешной кот" width="300" height="300" />
+                <h3 class="section-title">Котики дня</h3>
+                <div id="cat-carousel"></div>
             </div>
         </div>
+
         <div class="highlight-box">
             <span class="important-list-title">Топ причин почему коты смешные:</span>
             <ul class="skills-list">
@@ -81,5 +82,20 @@
                 Мой репозиторий
             </a>
         </div>
+
+        <script src="index.js"></script>
+        <script>
+          const catUrls = [
+            "cat1.png",
+            "cat2.png",
+            "cat3.png",
+            "cat4.png",
+            "cat5.png",
+          ];
+        
+          createCarousel(catUrls, "#cat-carousel");
+        </script>
+        
+
     </body>
 </html>
